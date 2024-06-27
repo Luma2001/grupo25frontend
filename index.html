@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Comisión 24217 - Grupos</title>
+</head>
+<body>
+    <header class="header"></header>
+    <main class="main">
+        <section id="formulario">
+            <img src="./img/fondo.png" alt="imagen de fondo">
+            <form id="ingresarAlumno">
+                <h1>Comisión 24217</h1>
+                    <h3>Armado de Grupos</h3>
+                
+                <label for="nombre">Nombre Completo</label>
+                <input name="nombre" id="nombre" type="text" placeholder="nombre completo..." required>
+                <label for="email">E-mail</label>
+                <input name="email" id="nombre" type="text" placeholder="e-mail..." required>
+                <label for="grupo">Grupo</label>
+                <select name="grupo"  id="">
+                    <option value= ""  hidden selected>Seleccionar Grupo</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                </select>
+                <div class="contenedorButtons">
+                    <button>Ver Tabla Grupos</button><button>Ingresar a Grupo</button>
+                </div>
+                
+            </form>
+        </section>
+        <section id="tabla-grupos">
+            <h3>Listado de Grupos</h3>
+            <table class="tabla">
+                <thead class="tabla-header">
+                    <tr>
+                        <th>NOMBRE</th>
+                        <th>E-MAIL</th>
+                        <th>GRUPO</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody class="tabla-body">                    
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer class="footer"></footer>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <!-- <script src="index.js" ></script> -->
+</body>
+</html>
