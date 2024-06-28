@@ -1,86 +1,78 @@
 // import axios from "axios";
 // const axios = require("axios");
 
-
-document.addEventListener("DOMContentLoaded", ()=>{
+document.addEventListener("DOMContentLoaded", () => {
 
     const tablaBody = document.querySelector(".tablaBody");
     const formAlumnos = document.querySelector("#ingresarAlumno");
 
-    const fetchGrupos = async ()=>{
+    const fetchGrupos = async () => {
 
         try {
-            const respuesta = await axios.get(`http://localhost:3030/grupos`)
-                console.log(respuesta.data);
-            const grupos = respuesta.data
+            const respuesta = await axios.get(`https://leom.alwaysdata.net/alumnos`)
+            console.log(respuesta.data);
+            const alumnos = respuesta.data
 
-            tablaBody.innerHTML="";
+            tablaBody.innerHTML = "";
 
-            grupos.forEach(element => {
-                
-            });(grupo=>{        
-                    //crear una nueva fila
-                    const fila = document.createElement("tr")
-                    //crear las celdas para el nombre, email, grupo y acciones.
-                    const celdaNombre = document.createElement("td")
-                    const celdaEmail = document.createElement("td")
-                    const celdaGrupo = document.createElement("td")
-                    const celdaAcciones = document.createElement("td")
+            alumnos.forEach(element => {
 
-                    // asignar el contenido a las celdas
-                    celdaNombre.textContent = grupo.nombre
-                    celdaEmail.textContent = grupo.email
-                    celdaGrupo.textContent = grupo.grupo
+            }); (alumno => {
+                // crear una nueva fila
+                const fila = document.createElement("tr")
+                // crear las celdas para el nombre, email, grupo y acciones.
+                const celdaNombre = document.createElement("td")
+                const celdaEmail = document.createElement("td")
+                const celdaGrupo = document.createElement("td")
+                const celdaAcciones = document.createElement("td")
 
-                    // crear el boton de editar
-                    const botonEditar = document.createElement("button")
-                    botonEditar.textContent = "Editar"
-                    botonEditar.addEventListener("click", ()=>{
-                        window.location.href = `edit.html?id=${grupo.id}`/*   redirigir a la pagina de edicion con el id del post en la URL */
-                    })
+                // asignar el contenido a las celdas
+                celdaNombre.textContent = alumno.nombre
+                celdaEmail.textContent = alumno.email
+                celdaGrupo.textContent = alumno.grupo
 
-                                    
-                    // crear boton de eliminar
-                    const botonEliminar = document.createElement("button")
-                    botonEliminar.textContent = "Eliminar"
-                    botonEliminar.addEventListener("click", ()=>{
-                        borrarAlumno(grupo.id)
-                    }) // ojo con esto
+                // crear el boton de editar
+                const botonEditar = document.createElement("button")
+                botonEditar.textContent = "Editar"
+                botonEditar.addEventListener("click", () => {
+                    window.location.href = `edit.html?id=${alumno.id}` // redirigir a la pagina de edicion con el id del post en la URL
+                })
 
-                    
-                    // agregar los botones a la celda de acciones
-                    celdaAcciones.appendChild(botonEliminar)
-                    celdaAcciones.appendChild(botonEditar)
+                // crear boton de eliminar
+                const botonEliminar = document.createElement("button")
+                botonEliminar.textContent = "Eliminar"
+                botonEliminar.addEventListener("click", () => {
+                    borrarAlumno(alumno.id)
+                }) // 
 
+                // agregar los botones a la celda de acciones
+                celdaAcciones.appendChild(botonEliminar)
+                celdaAcciones.appendChild(botonEditar)
 
-                    // agregar las celdas a la fila
-                    fila.appendChild(celdaNombre)
-                    fila.appendChild(celdaEmail)
-                    fila.appendChild(celdaGrupo)
-                    fila.appendChild(celdaAcciones)
+                // agregar las celdas a la fila
+                fila.appendChild(celdaNombre)
+                fila.appendChild(celdaEmail)
+                fila.appendChild(celdaGrupo)
+                fila.appendChild(celdaAcciones)
 
-
-                    //agregar la fila al cuerpo de la tabla
-                    tablaBody.appendChild(fila)
-
+                //agregar la fila al cuerpo de la tabla
+                tablaBody.appendChild(fila)
             })
-            
-        } catch (error) {
-            console.error("Error para obtener lista: ",error)
-        }
 
+        } catch (error) {
+            console.error("Error para obtener lista: ", error)
+        }
     }
 
-    const borrarAlumno = async (id)=>{
+    const borrarAlumno = async (id) => {
         try {
-            await axios.delete (`http://localhost:3030/grupos/S{id}`);
+            await axios.delete(`https://leom.alwaysdata.net/alumnos/${id}`);
             fetchGrupos();
         } catch (error) {
-            console.error("error para borrar alumno:",error)
+            console.error("error para borrar alumno:", error)
         }
     }
-
 
     fetchGrupos();
 
-})/*fin addEventListener */
+}) // fin addEventListener
