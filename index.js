@@ -66,6 +66,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    fetchGrupos();
+
+
     const borrarAlumno = async (id) => {
         try {
             await axios.delete(`https://leom.alwaysdata.net/alumnos/${id}`);
@@ -75,6 +78,27 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    fetchGrupos();
+    formAlumnos.addEventListener("submit", async (e)=>{
+        e.preventDefault();
+        const nuevoAlumno = {
+            nombre: document.querySelector("#nombre").value,
+            email: document.querySelector("#email").value,
+            grupo: document.querySelector("#grupo").value,
+        };
+        console.log(nuevoAlumno);
+        try {
+            await axios.post(`https://leom.alwaysdata.net/alumnos`, nuevoAlumno)//nuevoAlumno es lo que viaja por el body del request
+            //Reseteando datos del formulario
+            formAlumnos.reset();
+            //recargando lista de alumnos
+            fetchGrupos();
+
+        } catch (error) {
+            console.error("Error al crear registro de alumno:", error)
+        }
+
+    })//Fin formAlumno evento
+
+
 
 }) // fin addEventListener
