@@ -98,7 +98,7 @@
                 color: var(--color-negro);
                 height: 30px;
             }
-            .tabla-body{
+            #tabla-body{
                 border-bottom: 1px solid var(--color-azul);
                 background-color: var(--color-blanco);
                 
