@@ -9,14 +9,14 @@ Proyecto creado para trabajo integrador de NodeJs de CaC 2024
 En este repositorio se encuentra el Frontend del trabajo que se conecta con el Backend y la base de datos.
 
 ## Integrantes
-Luciana Quilcate
-Veronica 
-Diego Quevedo
-Leonardo Mathot
+- Luciana Quilcate
+- Veronica 
+- Diego Quevedo
+- Leonardo Mathot
 
 ## Links
-Repositorio del Frontend: https://github.com/Luma2001/grupo25frontend
-Sitio web: https://luma2001.github.io/grupo25frontend/
-Repositorio de la API: https://github.com/Luma2001/grupo25api
-URL del server: https://leom.alwaysdata.net/
-Base de Datos: mysql-leom.alwaysdata.net
+- Repositorio del Frontend: https://github.com/Luma2001/grupo25frontend
+- Sitio web: https://luma2001.github.io/grupo25frontend/
+- Repositorio de la API: https://github.com/Luma2001/grupo25api
+- URL del server: https://leom.alwaysdata.net/
+- Base de Datos: mysql-leom.alwaysdata.net
