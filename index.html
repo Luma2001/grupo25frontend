@@ -4,25 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Comisión 24217 - Grupos</title>
+    <title>Comisión 24217 - Grupo 25</title>
 </head>
 <body>
     <header class="header"></header>
     <main class="main">
         <section id="formulario">
             <img src="./img/fondo.png" alt="imagen de fondo">
-            <form id="ingresarAlumno">
+            <form id="ingresar-alumno">
                 <h1>Comisión 24217</h1>
                     <h3>Armado de Grupos</h3>
                 
                 <label for="nombre">Nombre Completo</label>
                 <input name="nombre" id="nombre" type="text" placeholder="nombre completo..." required>
                 <label for="email">E-mail</label>
-                <input name="email" id="nombre" type="text" placeholder="e-mail..." required>
+                <input name="email" id="email" type="text" placeholder="e-mail..." required>
                 <label for="grupo">Grupo</label>
-                <select name="grupo"  id="" required>
+                <select name="grupo"  id="grupo" required>
                     <option value= ""  hidden selected>Seleccionar Grupo</option>
-                    <option value="">...</option>
                     <option value="01">01</option>
                     <option value="02">02</option>
                     <option value="03">03</option>
@@ -49,7 +48,7 @@
                     <option value="24">24</option>
                     <option value="25">25</option>
                 </select>
-                <div class="contenedorButtons">
+                <div class="contenedor-buttons">
                     <button>Ver Tabla Grupos</button><button>Ingresar a Grupo</button>
                 </div>
                 
@@ -58,7 +57,7 @@
         <section id="tabla-grupos">
             <h3>Listado de Grupos</h3>
             <table class="tabla">
-                <thead class="tabla-header">
+                <thead id="tabla-header">
                     <tr>
                         <th>NOMBRE</th>
                         <th>E-MAIL</th>
@@ -66,7 +65,7 @@
                         <th>ACCIONES</th>
                     </tr>
                 </thead>
-                <tbody class="tabla-body">                    
+                <tbody id="tabla-body">                    
                 </tbody>
             </table>
         </section>

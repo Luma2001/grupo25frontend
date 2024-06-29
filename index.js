@@ -3,8 +3,8 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const tablaBody = document.querySelector(".tablaBody");
-    const formAlumnos = document.querySelector("#ingresarAlumno");
+    const tablaBody = document.querySelector("#tabla-body");
+    const formAlumnos = document.querySelector("#ingresar-alumno");
 
     const fetchGrupos = async () => {
 
