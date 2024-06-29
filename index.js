@@ -15,9 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             tablaBody.innerHTML = "";
 
-            alumnos.forEach(element => {
-
-            }); (alumno => {
+            alumnos.forEach(alumno => {
                 // crear una nueva fila
                 const fila = document.createElement("tr")
                 // crear las celdas para el nombre, email, grupo y acciones.
