@@ -29,6 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 celdaEmail.textContent = alumno.email
                 celdaGrupo.textContent = alumno.grupo
 
+                //asignar clase a celdas
+                celdaAcciones.className="celda-acciones"
+                celdaGrupo.className="celda-grupo"
+
                 // crear el boton de editar
                 const botonEditar = document.createElement("button")
                 botonEditar.textContent = "Editar"
