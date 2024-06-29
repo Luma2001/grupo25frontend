@@ -92,7 +92,7 @@
         .tabla{
             max-width: 1200px;
             width: 80%;
-            .tabla-header{
+            #tabla-header{
                 border-bottom: 2px solid var(--color-azul);
                 background-color: var(--color-rosa);
                 color: var(--color-negro);
@@ -101,7 +101,23 @@
             .tabla-body{
                 border-bottom: 1px solid var(--color-azul);
                 background-color: var(--color-blanco);
-                height: 30px;
+                
+                td{
+                    height: 30px;
+                    padding-left: 10px;
+                }
+                .celda-acciones{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding-left: 0;
+                    gap: 5px;
+                }
+                .celda-grupo{
+                    padding-left: 0;
+                    text-align: center;
+                }
             }
             
         }/*fin tabla*/
