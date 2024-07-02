@@ -87,6 +87,10 @@
         padding-top: 110px;
         padding-bottom: 110px;
         padding-left: 10%;
+        overflow-y: scroll;
+        img{
+            width: 100%;
+        }
         h3{
             color: var(--color-azul);
             text-align: left;
@@ -118,7 +122,21 @@
                     align-items: center;
                     padding-left: 0;
                     gap: 5px;
-                }
+                    button{
+                        background-color: var(--color-rojo);
+                        color: var(--color-blanco);
+                        padding: 4px;
+                        border: none;
+                        border-radius: 10px;
+                        font-weight: bold;
+                        animation: transform  5ms ease-in-out;
+                        
+                        &:hover{
+                            transform: scale(.9);
+                        }
+                    }
+                    
+                }/*fin celda-acciones*/
                 .celda-grupo{
                     padding-left: 0;
                     text-align: center;
