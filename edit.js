@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             console.log(datosActualizados);
             try {
                 await axios.put(`https://leom.alwaysdata.net/alumnos/${idAlumno}`,datosActualizados)
-                console.log("Datos actualizados correctamente");
+                alert("Datos actualizados correctamente");
                 window.location.href = `index.html?#tabla-grupos`
             } catch (error) {
                 console.error("error para actualizar datos de alumno:", error)
