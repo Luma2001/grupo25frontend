@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const fetchUnGrupo = async (grupo)=>{
 
         try {
-            const respuesta = await axios.get(`http://localhost:3030/grupos/grupo/${grupo}`)
+            const respuesta = await axios.get(`https://leom.alwaysdata.net/alumnos/grupo/${grupo}`)
                 console.log("Lista de grupo buscado: " + respuesta.data);
             const grupos = respuesta.data
 
