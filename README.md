@@ -13,11 +13,11 @@ A través de él podemos realizar las peticiones CRUD a la Api creada:
   
   ![imagen](https://github.com/Luma2001/grupo25frontend/assets/114626233/3238eef6-3a45-45d8-87e1-b7778017fbce)
   
-- Cuenta con una tabla en donde se puede ver todos los alumnos registrados. En la misma puede eliminar un alumno o ir a la página editar.
+- Cuenta con una tabla en donde se pueden ver todos los alumnos registrados. Cada registro tiene la opción de ser eliminado o editado en la página editar.
 
   ![imagen](https://github.com/Luma2001/grupo25frontend/assets/114626233/e05dfb9f-9b36-4248-a387-026a572452ee)
 
--  Tiene la opción de realizar una búsqueda por grupo.
+-  La tabla cuenta con un filtro que permite realizar una búsqueda por grupo.
 
   ![imagen](https://github.com/Luma2001/grupo25frontend/assets/114626233/c9787f50-ea24-44ad-b6f5-c5d300a2e323)
 
