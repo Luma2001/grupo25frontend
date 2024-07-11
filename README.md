@@ -29,7 +29,6 @@ A través de él podemos realizar las peticiones CRUD a la Api creada:
 
 ## Integrantes
 - Luciana Quilcate
-- Veronica 
 - Diego Quevedo
 - Leonardo Mathot
 
